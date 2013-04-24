@@ -311,7 +311,7 @@
     NSDate *result = nil;
     
     [dateFormatter setDateFormat: format];
-    
+    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
     result = [dateFormatter dateFromString: dateString];
 #if ! __has_feature(objc_arc)
     [dateFormatter release];
